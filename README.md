@@ -3,6 +3,10 @@
 This repository implements the **SegFormer-B2** architecture for semantic segmentation on the **Cityscapes** dataset.  
 The model was trained for **20 epochs** and achieved an **accuracy of 86%**.
 
+📦 **Model Weights:**  
+The trained model weights have been uploaded under the **[v1.0.0 release](https://github.com/vinith-369/SegFormer/releases/tag/v1.0.0)**.  
+You can download the `.pth` file from there to directly test or fine-tune the model.
+
 ---
 
 ## 📘 Overview
@@ -19,11 +23,11 @@ Unlike traditional CNN-based methods, SegFormer combines **hierarchical Transfor
 
 The implementation includes the following key modules:
 
-- `Attention.py` — Implements the **Efficient Self-Attention** mechanism used in SegFormer.
-- `Head.py` — Defines the **MLP-based Decoder Head**.
-- `modules.py` — Contains building blocks like **Mix FFN**, **Overlap Patch Embedding**, and **Transformer Encoder Layers**.
-- `segformer.py` — Integrates encoder and decoder into a complete SegFormer-B2 architecture.
-- `utils.py` — Includes helper functions for dataset preprocessing, visualization, and evaluation.
+- `Attention.py` — Implements the **Efficient Self-Attention** mechanism used in SegFormer.  
+- `Head.py` — Defines the **MLP-based Decoder Head**.  
+- `modules.py` — Contains building blocks like **Mix FFN**, **Overlap Patch Embedding**, and **Transformer Encoder Layers**.  
+- `segformer.py` — Integrates encoder and decoder into a complete SegFormer-B2 architecture.  
+- `utils.py` — Includes helper functions for dataset preprocessing, visualization, and evaluation.  
 - `__init__.py` — Makes the modules importable as a package.
 
 ---
@@ -38,15 +42,17 @@ It includes 19 semantic classes such as road, car, pedestrian, building, and veg
 
 ## ⚙️ Training Details
 
-- **Model:** SegFormer-B2  
-- **Dataset:** Cityscapes  
-- **Epochs:** 20  
-- **Accuracy:** 86%  
-- **Optimizer:** AdamW  
-- **Learning Rate:** 6e-5  
-- **Batch Size:** 8  
-- **Loss Function:** Cross-Entropy Loss  
-- **Hardware:** Trained on GPU (recommended for large images)
+| Parameter | Value |
+|------------|--------|
+| **Model** | SegFormer-B2 |
+| **Dataset** | Cityscapes |
+| **Epochs** | 20 |
+| **Accuracy** | 86% |
+| **Optimizer** | AdamW |
+| **Learning Rate** | 6e-5 |
+| **Batch Size** | 8 |
+| **Loss Function** | Cross-Entropy Loss |
+| **Hardware** | GPU (Recommended) |
 
 ---
 
@@ -54,6 +60,5 @@ It includes 19 semantic classes such as road, car, pedestrian, building, and veg
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/segformer-cityscapes.git
-cd segformer-cityscapes
-
+git clone https://github.com/vinith-369/SegFormer.git
+cd SegFormer
